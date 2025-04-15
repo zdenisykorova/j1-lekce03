@@ -19,16 +19,15 @@ public class HlavniProgram {
     }
 
     public void nakresliCtverec(int delkaStrany) {
-        for (int i = 0; i < 4; i++) {
-            zofka.move(delkaStrany);
-            zofka.turnRight(90);
+        nakresliObdelnik(delkaStrany,delkaStrany);
         }
-    }
+
 
     public void nakresliBarevnyCtverec(int delkaStrany, Color barva) {
         zofka.setPenColor(barva);
         nakresliCtverec(delkaStrany);
     }
+
 
     public void nakresliObdelnik(int delkaStranyA, int delkaStranyB) {
         for (int i = 0; i < 2; i++) {
