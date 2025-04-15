@@ -2,6 +2,8 @@ package cz.czechitas.turtle;
 
 import dev.czechitas.java1.turtle.engine.Turtle;
 
+import java.awt.*;
+
 public class HlavniProgram {
     private Turtle zofka;
 
@@ -23,6 +25,11 @@ public class HlavniProgram {
         }
     }
 
+    public void nakresliBarevnyCtverec(int delkaStrany, Color barva) {
+        zofka.setPenColor(barva);
+        nakresliCtverec(delkaStrany);
+    }
+
     public void start() {
         zofka = new Turtle();
 
@@ -36,5 +43,8 @@ public class HlavniProgram {
         nakresliCtverec(10);
         nakresliCtverec(60);
         nakresliCtverec(150);
-        }
+        nakresliBarevnyCtverec(40, Color.RED);
+        nakresliBarevnyCtverec(60, Color.green);
+
+    }
 }
