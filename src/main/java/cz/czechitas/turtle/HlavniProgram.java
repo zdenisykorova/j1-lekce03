@@ -9,10 +9,23 @@ public class HlavniProgram {
         new HlavniProgram().start();
     }
 
+
+    public void nakresliDomek() {
+        for (int i = 0; i < 4; i++) {
+            zofka.move(50);
+            zofka.turnRight(90);
+        }
+    }
+
     public void start() {
         zofka = new Turtle();
 
         //TODO Tady bude kód pro kreslení želví grafiky.
-    }
 
+        nakresliDomek();
+        zofka.penUp();
+        zofka.move(150);
+        zofka.penDown();
+        nakresliDomek();
+    }
 }
