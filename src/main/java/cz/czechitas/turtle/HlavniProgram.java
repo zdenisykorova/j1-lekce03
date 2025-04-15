@@ -9,10 +9,16 @@ public class HlavniProgram {
         new HlavniProgram().start();
     }
 
-
     public void nakresliDomek() {
         for (int i = 0; i < 4; i++) {
             zofka.move(50);
+            zofka.turnRight(90);
+        }
+    }
+
+    public void nakresliCtverec(int delkaStrany) {
+        for (int i = 0; i < 4; i++) {
+            zofka.move(delkaStrany);
             zofka.turnRight(90);
         }
     }
@@ -27,5 +33,8 @@ public class HlavniProgram {
         zofka.move(150);
         zofka.penDown();
         nakresliDomek();
-    }
+        nakresliCtverec(10);
+        nakresliCtverec(60);
+        nakresliCtverec(150);
+        }
 }
