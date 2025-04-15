@@ -30,6 +30,15 @@ public class HlavniProgram {
         nakresliCtverec(delkaStrany);
     }
 
+    public void nakresliObdelnik(int delkaStranyA, int delkaStranyB) {
+        for (int i = 0; i < 2; i++) {
+            zofka.move(delkaStranyA);
+            zofka.turnRight(90);
+            zofka.move(delkaStranyB);
+            zofka.turnRight(90);
+        }
+    }
+
     public void start() {
         zofka = new Turtle();
 
@@ -45,6 +54,7 @@ public class HlavniProgram {
         nakresliCtverec(150);
         nakresliBarevnyCtverec(40, Color.RED);
         nakresliBarevnyCtverec(60, Color.green);
-
+        nakresliBarevnyCtverec(150, Color.yellow);
+        nakresliObdelnik(100, 50);
     }
 }
