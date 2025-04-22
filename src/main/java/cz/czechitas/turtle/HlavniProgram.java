@@ -38,6 +38,16 @@ public class HlavniProgram {
         }
     }
 
+    public void nakresliTrojuhelnik(int delkaStranyC, int delkaStranyD, int delkaStranyE) {
+        zofka.move(delkaStranyC);
+        zofka.turnRight(90);
+        zofka.move(delkaStranyD);
+        zofka.turnRight(135);
+        zofka.move(delkaStranyE);
+    }
+
+
+
     public void start() {
         zofka = new Turtle();
 
@@ -55,5 +65,7 @@ public class HlavniProgram {
         nakresliBarevnyCtverec(60, Color.green);
         nakresliBarevnyCtverec(150, Color.yellow);
         nakresliObdelnik(100, 50);
+        nakresliTrojuhelnik(92,100,135);
+
     }
 }
